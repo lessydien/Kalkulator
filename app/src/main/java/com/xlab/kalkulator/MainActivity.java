@@ -2,6 +2,8 @@ package com.xlab.kalkulator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -12,7 +14,7 @@ import com.xlab.kalkulator.sederhana.Kalkulatorsederhana;
 public class MainActivity extends AppCompatActivity {
 
     private TextView hsl;
-    private EditText opj1, opj2;
+    private EditText opj1, opj2, etalamat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         hsl = findViewById(R.id.hasiljumlah);
         opj1 = findViewById(R.id.opjumlah1);
         opj2 = findViewById(R.id.opjumlah2);
+        etalamat = findViewById(R.id.alamatpage);
     }
 /*
     int jumlah (int op1, int op2) {
@@ -43,5 +46,16 @@ public class MainActivity extends AppCompatActivity {
         ks.setOp2(op2);
         hasil = ks.jumlah();
         hsl.setText(String.valueOf(hasil));
+    }
+
+    public void bukaweb(View v) {
+        String alamat = null;
+        alamat = etalamat.getText().toString();
+       // Uri uri = Uri.parse("tel:"+alamat);
+       // Intent intent = new Intent(Intent.ACTION_DIAL,uri);
+        Intent it = new Intent(this, MainActivity2.class);
+        it.putExtra("nama", alamat);
+        startActivity(it);
+
     }
 }
