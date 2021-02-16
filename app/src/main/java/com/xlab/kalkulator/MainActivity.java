@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -15,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView hsl;
     private EditText opj1, opj2, etalamat;
+    private MenuInflater menuInflater;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +39,33 @@ public class MainActivity extends AppCompatActivity {
         return op1-op2;
     }
 */
+
+    /*
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        menuInflater =  getMenuInflater();
+        menuInflater.inflate(R.menu.optionmenu,menu);
+        return true;
+        //return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.menu1:
+
+                return true;
+            case R.id.menu2:
+
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+    */
+
+
     public void panggilJumlah(View v) {
         Kalkulatorsederhana  ks = new Kalkulatorsederhana();
         int op1 = 0;

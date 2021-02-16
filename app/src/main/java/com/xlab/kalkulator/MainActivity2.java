@@ -9,6 +9,7 @@ import android.widget.TextView;
 public class MainActivity2 extends AppCompatActivity {
     private TextView tvdata;
     private Intent it;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
