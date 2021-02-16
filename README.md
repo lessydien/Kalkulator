@@ -9,3 +9,8 @@ aplikasi yang dibuat menggunakan android
 ```java
 public int hitung(int a, int b){
 }
+```
+
+```cmd
+cd myfolder
+```
