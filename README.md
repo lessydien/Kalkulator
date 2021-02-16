@@ -11,6 +11,6 @@ public int hitung(int a, int b){
 }
 ```
 
-```cmd
+```sh
 cd myfolder
 ```
